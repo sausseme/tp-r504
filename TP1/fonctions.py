@@ -3,3 +3,4 @@ def puissance(a, b):
         return -1
     else:
         return a ** b
+        
