@@ -9,5 +9,5 @@ jobs:
         uses: actions/setup-python@v4
       - name: pip3 install pytest 
       - name: Run tests
-        run: pytest tp-r504/TP1/test.py
+        run: pytest /TP1/test.py
              
