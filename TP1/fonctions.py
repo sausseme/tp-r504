@@ -1,5 +1,5 @@
 def puissance(a, b):
-
-    resultat = a ** b
-    
-    return resultat
+    if a < 0 and b == 0:
+        return -1
+    else:
+        return a ** b
