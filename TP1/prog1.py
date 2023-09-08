@@ -1,11 +1,9 @@
 print("Hello, World !") 
 
-nombre = float(input("Entrez un nombre : "))
-carre = nombre ** 2
-print(f"Le carré de {nombre} est : {carre}")
+import fonctions as f
 
 while True:
-        nombre = float(input("Entrez un nombre : "))
-        carre = nombre ** 2
-        print(f"Le carré de {nombre} est : {carre}")
-
+	a = int(input("Entrez un nombre pour a: "))
+	b = int(input("Entrez un nombre pour b: "))
+	res = f.puissance(a, b)
+	print(f'{a}^{b} = {res}')
