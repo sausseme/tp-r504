@@ -8,17 +8,15 @@ jobs:
         python−version : ["3.8","3.10"]
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python for Demo
-        uses: actions/setup-python@v4
-        with :
-          python−version: $ {{ matrix . python−version }}
+      
       - name: installer pyetest
         run: pip3 install pytest 
       - name: Run tests
         run: pytest TP1/test.py
       - run : echo "Nom branche:" ${{ github.ref }}
       - run : echo "Nom repo:" ${{ github.repository }}.
-      − name : Set up Python f o r Demo
+      - run : python --version
+      - name : Set up Python f o r Demo
         uses : actions/setup−python@v4
         with :
           python−version : $ { { matrix . python−version } }
