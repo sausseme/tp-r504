@@ -1,3 +1,5 @@
+./purge.sh
+
 ./create_network.sh
 
 if [ $? != 0 ]; then
@@ -11,6 +13,8 @@ if [ $? != 0 ]; then
         echo "echec de lancement du script  run_mysql.sh"
         exit 666
 fi
+
+sleep 30
 
 ./filldb.sh
 
