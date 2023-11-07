@@ -1,0 +1,7 @@
+FROM ubuntu:22.04
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get -y install npm nodejs
+WORKDIR /srv
+RUN nodejs --version
+RUN npm --version
+RUN npm install -g @dbml/cli
