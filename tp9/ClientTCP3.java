@@ -1,8 +1,8 @@
-// ClientTCP2.java
+// ClientTCP3.java
 import java.io.*;
 import java.net.*;
 
-public class ClientTCP2
+public class ClientTCP3
 {
 	public static void main(String[] args) 
 	{

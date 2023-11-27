@@ -1,8 +1,8 @@
-// ServeurTCP2.java
+// ServeurTCP3.java
 import java.io.*;
 import java.net.*;
 
-public class ServeurTCP2
+public class ServeurTCP3
 {
 	public static void main(String[] args) 
 	{
@@ -16,6 +16,7 @@ public class ServeurTCP2
 				System.out.println( "Connection au client" );
 				DataInputStream dIn = new DataInputStream ( socket.getInputStream() );
 				System.out.println( "Message: " + dIn.readUTF() );
+				String rev = new StringBuilder(msg).reverse().toString();
 				socket.close();
 			}
 		}
