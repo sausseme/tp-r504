@@ -16,7 +16,7 @@ public class ServeurTCP3
 				System.out.println( "Connection au client" );
 				DataInputStream dIn = new DataInputStream ( socket.getInputStream() );
 				String msg = dIn.readUTF();
-				System.out.println( "Message: " + dIn.readUTF() );
+				System.out.println( "Message: " + msg );
 
 				String rev = new StringBuilder(msg).reverse().toString();
 

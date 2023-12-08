@@ -12,7 +12,9 @@ public class ClientTCP3
 			Socket socket = new Socket( "localhost", 2016 );
 			DataOutputStream dOut = new DataOutputStream( socket.getOutputStream() );
 			dOut.writeUTF( args[0] );
-			System.out.println( "Message inversé: " + dIn.readUTF() );
+			DataInputStream dIn = new DataInputStream ( socket.getInputStream() );
+			String msg = dIn.readUTF();
+			System.out.println( "Message inversé: " + msg );
 			socket.close();
 		}
 
