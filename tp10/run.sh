@@ -1,0 +1,1 @@
+java -classpath .:"/home/user/tp-r504/tp10/lib/*" Client3bis $1
