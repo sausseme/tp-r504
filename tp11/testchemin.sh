@@ -7,8 +7,20 @@ fi
 
 path=$1
 
-if [ -e "$path" ]; then
+IFS="/" read -ra tab <<< "$path"
+
+path_valid=true
+current_path="/"
+
+for tab in "${tab[@]}"; do
+    current_path="$current_path$tab/"
+    if [ ! -d "$current_path" ]; then
+        path_valid=false
+        echo "Chemin invalide, le dossier $tab n'existe pas dans $current_path"
+        break
+    fi
+done
+
+if [ "$path_valid" = true ]; then
     echo "Chemin valide"
-else
-    echo "Chemin invalide, le dossier $(basename "$path") n'existe pas dans $(dirname "$path")"
 fi
